@@ -413,7 +413,7 @@ Add copyright, conference name, or any persistent text:
 ```yaml
 branding:
   footer:
-    text: "© 2024 Your Name · ICML 2024"
+    text: "© 2024 Taehun Ryu · ICML 2024"
     position: "bottom-center"
 ```
 

@@ -1,0 +1,13 @@
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var path = window.location.pathname;
+    // Match only project detail pages like /projects/<slug>/ (not /projects/ list page)
+    if (!/^\/projects\/[^/]+\/?$/.test(path)) return;
+
+    var shareLinks = document.querySelectorAll('[id^="share-link-"]');
+    if (!shareLinks.length) return;
+
+    var shareSection = shareLinks[0].closest("section");
+    if (shareSection) shareSection.remove();
+  });
+</script>
