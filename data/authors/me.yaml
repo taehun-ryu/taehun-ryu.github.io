@@ -12,8 +12,9 @@ status:
   icon: "☕️"
 role: MS Student in Artificial Intelligence
 bio: |
-  Taehun Ryu is an MS student in Artificial Intelligence at UNIST.
-  His interests include sensor calibration, visual SLAM, and event-based robot vision.
+  I am an MS student in Artificial Intelligence at UNIST.
+  I am a member of the [3D Vision & Robotics Lab](https://unist.info/) under the supervision of Prof. [Kyungdon Joo](https://unist.info/?page_id=2358).
+  My research interests include sensor calibration, visual SLAM, and event-based robot vision.
 
 affiliations:
   - name: Ulsan National Institute of Science and Technology (UNIST)
@@ -33,14 +34,15 @@ interests:
   - Event-based Robot Vision
 
 education:
-  - degree: MS Artificial Intelligence
+  - degree: MS in Artificial Intelligence
     institution: Ulsan National Institute of Science and Technology (UNIST)
     start: 2025-03-02
   - degree: BS in Robotics
     institution: Hanyang University ERICA
     start: 2019-03-02
     end: 2024-08-31
-    summary: Minor in Artificial Intelligence. Early graduation with honors.
+    summary: |
+      Minor in Artificial Intelligence. Early graduation with honors. GPA: 4.3/4.5.
 
 experience:
   - role: Graduate Research Intern
@@ -48,7 +50,7 @@ experience:
     start: 2024-07-01
     end: 2025-02-28
     summary: |
-      Conducted an industry-academia project at UNIST's 3D Vision & Robotics Lab in collaboration with CLOBOT on multi-camera-based SLAM system development.
+      Conducted an industry-academia project at 3D Vision & Robotics Lab in collaboration with CLOBOT on multi-camera-based SLAM system development.
 
 skills:
   - name: Technical Skills
@@ -80,5 +82,6 @@ awards:
   - title: Best Paper Award
     awarder: NeurIPS
     date: "2022-12-01"
-    summary: Awarded for groundbreaking work on efficient training of large models.
+    summary: |
+      Awarded for groundbreaking work on efficient training of large models.
     icon: hero/trophy

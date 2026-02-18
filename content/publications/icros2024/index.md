@@ -52,7 +52,7 @@ links:
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: ""
+  caption: "caption"
   focal_point: ""
   preview_only: false
 
@@ -61,7 +61,8 @@ image:
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
-projects: []
+projects:
+  - table-robot-system-hive
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.
@@ -73,4 +74,4 @@ slides: ""
 
 This paper received the **Undergraduate Paper Award** at **ICROS2024**.
 
-All student authors are marked as **equal contribution**, and the final author is the supervising professor.
+All student authors are marked as **equal contribution**.

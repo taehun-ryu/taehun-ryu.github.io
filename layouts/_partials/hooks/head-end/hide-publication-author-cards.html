@@ -1,0 +1,16 @@
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (!/^\/publications\/[^/]+\/?$/.test(window.location.pathname)) return;
+
+    var cards = Array.from(document.querySelectorAll("div.flex.pt-12.pb-4")).filter(
+      function (el) {
+        var label = el.querySelector("div.uppercase");
+        return label && label.textContent.trim().toLowerCase() === "authors";
+      },
+    );
+
+    cards.forEach(function (el) {
+      el.remove();
+    });
+  });
+</script>
