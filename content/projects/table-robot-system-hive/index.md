@@ -8,12 +8,13 @@ links:
   - type: code
     url: https://github.com/BEYOND-thelimit/TableRobotSystem-hive.git
 tags:
-  - Undergraduate
   - Multi-Robot system
-  - Spatial Intelligence
+  - Infrastructure-based Perception
+  - Multi-Camera Calibration
   - Autonomous Navigation
-  - ROS2
+  - Undergraduate
 ---
+#### *Undergraduate project at Hanyang Univ.
 
 This project developed a table-robot system aimed at complete automation of restaurant hall operations.
 

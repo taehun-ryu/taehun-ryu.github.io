@@ -1,21 +1,19 @@
 ---
-title: 'Projects'
+title: 'Teaching'
 date: 2024-05-19
 type: landing
 
 design:
-  # Section spacing
   spacing: '5rem'
 
-# Page sections
 sections:
   - block: collection
     content:
-      title: Projects
-      text: I enjoy making things. Here are projects that I have worked on over the years.
+      title: Teaching
+      text: Study groups and mentoring activities that I led for students.
       filters:
         folders:
-          - projects
+          - teaching
     design:
       view: article-grid
       fill_image: false

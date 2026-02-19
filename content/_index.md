@@ -7,7 +7,7 @@ type: landing
 
 design:
   # Default section spacing
-  spacing: '6rem'
+  spacing: '4rem'
 
 sections:
   - block: resume-biography-3
@@ -20,7 +20,7 @@ sections:
         text: Download CV
         url: /uploads/cv_250728.pdf
       headings:
-        about: ''
+        about: 'Research Profile'
         education: ''
         interests: ''
     design:
@@ -41,7 +41,7 @@ sections:
     id: publications
     content:
       title: Publications
-      count: 1
+      count: 3
       filters:
         folders:
           - publications
@@ -59,7 +59,7 @@ sections:
   - block: collection
     id: projects
     content:
-      title: Projects
+      title: Recent Projects
       count: 2
       filters:
         folders:
@@ -68,16 +68,14 @@ sections:
     design:
       view: card
   - block: collection
-    id: courses
+    id: teaching
     content:
-      title: Courses
-      count: 1
+      title: Teaching
+      count: 2
       filters:
         folders:
-          - courses
-        tag: Course
-        kinds:
-          - section
+          - teaching
+        exclude_featured: false
     design:
       view: card
 ---

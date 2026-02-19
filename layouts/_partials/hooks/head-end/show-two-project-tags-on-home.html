@@ -2,22 +2,22 @@
   document.addEventListener("DOMContentLoaded", function () {
     if (window.location.pathname !== "/") return;
 
-    var projectCards = Array.from(document.querySelectorAll('div[role="article"]')).filter(
+    var contentCards = Array.from(document.querySelectorAll('div[role="article"]')).filter(
       function (card) {
-        return !!card.querySelector('h3 a[href^="/projects/"]');
+        return !!card.querySelector('h3 a[href^="/projects/"], h3 a[href^="/teaching/"]');
       },
     );
 
-    projectCards.forEach(async function (card) {
-      var titleLink = card.querySelector('h3 a[href^="/projects/"]');
+    contentCards.forEach(async function (card) {
+      var titleLink = card.querySelector('h3 a[href^="/projects/"], h3 a[href^="/teaching/"]');
       var tagRow = card.querySelector(".flex.items-center.gap-2");
       if (!titleLink || !tagRow) return;
       if (tagRow.querySelectorAll("a").length >= 2) return;
 
-      var projectPath = new URL(titleLink.href, window.location.origin).pathname;
+      var contentPath = new URL(titleLink.href, window.location.origin).pathname;
 
       try {
-        var res = await fetch(projectPath);
+        var res = await fetch(contentPath);
         if (!res.ok) return;
         var html = await res.text();
         var doc = new DOMParser().parseFromString(html, "text/html");

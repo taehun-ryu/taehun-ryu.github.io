@@ -3,16 +3,15 @@ title: Large Unmanned Store System
 date: 2023-01-31
 summary: "Built a low-cost autonomous cart system with centralized multi-camera perception, cart-level obstacle avoidance, and hybrid localization."
 links:
-  - type: site
-    url: https://github.com/taehun-ryu/ShareChallenge_team_yycprg.git
   - type: code
     url: https://github.com/taehun-ryu/ShareChallenge_team_yycprg.git
 tags:
+  - Infrastructure-based Perception
+  - Multi-Camera Calibration
+  - Person Following
   - Undergraduate
-  - Robotics
-  - Computer Vision
-  - Autonomous Navigation
 ---
+#### *Undergraduate project at Hanyang Univ.
 
 This project focused on building a practical and cost-efficient autonomous cart system for large indoor retail environments.
 

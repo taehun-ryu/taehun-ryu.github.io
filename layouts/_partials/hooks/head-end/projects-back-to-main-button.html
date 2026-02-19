@@ -1,0 +1,58 @@
+<style>
+  #projects-back-to-main-button-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 2.2rem 0 0.6rem;
+  }
+
+  #projects-back-to-main-button {
+    display: inline-block;
+    padding: 0.62rem 1.28rem;
+    border-radius: 0.78rem;
+    border: 1.5px solid rgba(128, 143, 168, 0.68);
+    background: linear-gradient(180deg, #1f2b44 0%, #18233a 100%);
+    color: #dbe1ec;
+    font-size: clamp(0.94rem, 1.35vw, 1.08rem);
+    font-weight: 650;
+    letter-spacing: 0.005em;
+    line-height: 1.15;
+    text-decoration: none;
+    box-shadow:
+      0 7px 16px rgba(6, 10, 22, 0.28),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    transition: all 0.2s ease;
+  }
+
+  #projects-back-to-main-button:hover {
+    transform: translateY(-1px);
+    border-color: rgba(165, 180, 204, 0.88);
+    background: linear-gradient(180deg, #253451 0%, #1c2941 100%);
+    color: #eef2f8;
+  }
+
+  #projects-back-to-main-button:active {
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (!/^\/projects\/?$/.test(window.location.pathname)) return;
+    if (document.getElementById("projects-back-to-main-button-wrap")) return;
+
+    var pageBody = document.querySelector(".page-body");
+    var targetSection = pageBody ? pageBody.querySelector("section:last-of-type") : null;
+    if (!targetSection) return;
+
+    var wrapper = document.createElement("div");
+    wrapper.id = "projects-back-to-main-button-wrap";
+
+    var link = document.createElement("a");
+    link.id = "projects-back-to-main-button";
+    link.href = "/";
+    link.textContent = "Back to Main Page";
+
+    wrapper.appendChild(link);
+    targetSection.insertAdjacentElement("afterend", wrapper);
+  });
+</script>
