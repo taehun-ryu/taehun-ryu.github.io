@@ -43,14 +43,21 @@ featured: false
 
 links:
   - type: source
+    name: "Site"
     url: "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11909262"
+  - type: pdf
+    name: "Paper"
+    url: "/uploads/icros2024.pdf"
+  # - type: pdf
+  #   name: "Supplementary Material"
+  #   url: "/uploads/icros2024.pdf"
   - type: project
     url: "https://github.com/BEYOND-thelimit/TableRobotSystem-hive?tab=readme-ov-file"
   - type: code
     url: "https://github.com/BEYOND-thelimit/TableRobotSystem-hive?tab=readme-ov-file"
 
 # Featured image
-# To use, add an image named `featured.jpg/png` to your page's folder. 
+# To use, add an image named `featured.jpg/png` to your page's folder.
 image:
   caption: "caption"
   focal_point: ""
