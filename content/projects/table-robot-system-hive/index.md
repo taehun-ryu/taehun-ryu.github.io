@@ -11,7 +11,7 @@ tags:
   - Multi-Robot system
   - Infrastructure-based Perception
   - Multi-Camera Calibration
-  - Autonomous Navigation
+  - Navigation
   - Undergraduate
 ---
 #### *Undergraduate project at Hanyang Univ.

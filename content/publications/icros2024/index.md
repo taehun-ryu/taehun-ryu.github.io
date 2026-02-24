@@ -15,7 +15,7 @@ author_notes:
 - "Equal contribution"
 - "Equal contribution"
 - "Equal contribution"
-- "Supervising professor"
+- "Corresponding author"
 date: "2024-07-01T00:00:00Z"
 
 # Schedule page publish date (NOT publication's date).
@@ -27,8 +27,8 @@ publishDate: "2024-07-01T00:00:00Z"
 publication_types: ["paper-conference"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*ICROS 2024* (Undergraduate Paper Award)"
-#publication_short: "ICROS2024"
+publication: "*Institute of Control, Robotics and Systems (ICROS)*"
+publication_short: "*ICROS*"
 
 abstract: This paper presents a table robot system for complete restaurant hall automation.
 
@@ -36,9 +36,9 @@ abstract: This paper presents a table robot system for complete restaurant hall 
 summary: Received the Undergraduate Paper Award at ICROS2024. All student authors contributed equally.
 
 tags:
+- Multi-Robot System
+- Infrastructure-based Perception
 - Navigation
-- Robotics
-- Artificial Intelligence
 featured: false
 
 links:
@@ -53,8 +53,8 @@ links:
   #   url: "/uploads/icros2024.pdf"
   - type: project
     url: "https://github.com/BEYOND-thelimit/TableRobotSystem-hive?tab=readme-ov-file"
-  - type: code
-    url: "https://github.com/BEYOND-thelimit/TableRobotSystem-hive?tab=readme-ov-file"
+  # - type: code
+  #   url: "https://github.com/BEYOND-thelimit/TableRobotSystem-hive?tab=readme-ov-file"
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
