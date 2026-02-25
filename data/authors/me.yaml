@@ -10,9 +10,10 @@ name:
   pronouns: ''
 status:
   icon: "☕️"
-role: M.S. Student @UNIST AIGS
+role: M.S. Student @UNIST
 bio: |
-  I'm currently pursuing an M.S. in [UNIST AIGS](https://aigs.unist.ac.kr/eng/index.php) and working in the [3D Vision & Robotics Lab](https://unist.info/) advised by Prof. [Kyungdon Joo](https://unist.info/?page_id=2358).
+  I'm currently pursuing an M.S. in Artificial Intelligence at [UNIST](https://aigs.unist.ac.kr/eng/index.php) and working in the [3D Vision&nbsp;&amp;&nbsp;Robotics&nbsp;Lab](https://unist.info/) advised by Prof. [Kyungdon Joo](https://unist.info/?page_id=2358).
+  I received my B.S. in Robotics from Hanyang University ERICA in 2024.
   My research focuses on how robots perceive the world through sensor calibration, visual SLAM, and event-based vision.
 
 affiliations:
@@ -22,10 +23,15 @@ links:
   - icon: at-symbol
     url: mailto:xogns2079@gmail.com
     label: E-mail Me
+  - icon: brands/google-scholar
+    url: https://scholar.google.com/
+    label: Google Scholar
   - icon: brands/linkedin
-    url: https://www.linkedin.com/in/ryuxogns/
+    url: https://www.linkedin.com/in/taehunryu/
+    label: LinkedIn Profile
   - icon: brands/github
     url: https://github.com/taehun-ryu
+    label: GitHub Profile
 
 interests:
   - Sensor Calibration
