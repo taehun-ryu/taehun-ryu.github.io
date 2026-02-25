@@ -10,9 +10,9 @@ name:
   pronouns: ''
 status:
   icon: "☕️"
-role: MS Student in Artificial Intelligence
+role: M.S. Student @UNIST AIGS
 bio: |
-  I am currently pursuing an M.S. in Artificial Intelligence at [UNIST](https://www.unist.ac.kr/) and working in the [3D Vision & Robotics Lab](https://unist.info/) advised by Prof. [Kyungdon Joo](https://unist.info/?page_id=2358).
+  I'm currently pursuing an M.S. in [UNIST AIGS](https://aigs.unist.ac.kr/eng/index.php) and working in the [3D Vision & Robotics Lab](https://unist.info/) advised by Prof. [Kyungdon Joo](https://unist.info/?page_id=2358).
   My research focuses on how robots perceive the world through sensor calibration, visual SLAM, and event-based vision.
 
 affiliations:
@@ -34,10 +34,10 @@ interests:
   - 3D Vision
 
 education:
-  - degree: MS in Artificial Intelligence
+  - degree: M.S. in Artificial Intelligence
     institution: Ulsan National Institute of Science and Technology (UNIST)
     start: 2025-03-02
-  - degree: BS in Robotics
+  - degree: B.S. in Robotics
     institution: Hanyang University ERICA
     start: 2019-03-02
     end: 2024-08-31
