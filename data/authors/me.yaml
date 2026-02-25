@@ -12,9 +12,8 @@ status:
   icon: "☕️"
 role: MS Student in Artificial Intelligence
 bio: |
-  I am an MS student in Artificial Intelligence at UNIST.
-  I am a member of the [3D Vision & Robotics Lab](https://unist.info/) under the supervision of Prof. [Kyungdon Joo](https://unist.info/?page_id=2358).
-  My research interests include sensor calibration, visual SLAM, and event-based robot vision.
+  I am currently pursuing an M.S. in Artificial Intelligence at [UNIST](https://www.unist.ac.kr/) and working in the [3D Vision & Robotics Lab](https://unist.info/) advised by Prof. [Kyungdon Joo](https://unist.info/?page_id=2358).
+  My research focuses on how robots perceive the world through sensor calibration, visual SLAM, and event-based vision.
 
 affiliations:
   - name: Ulsan National Institute of Science and Technology (UNIST)
@@ -32,6 +31,7 @@ interests:
   - Sensor Calibration
   - Visual SLAM
   - Event-based Robot Vision
+  - 3D Vision
 
 education:
   - degree: MS in Artificial Intelligence
