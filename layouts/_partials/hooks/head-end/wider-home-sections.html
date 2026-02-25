@@ -1,0 +1,26 @@
+<style>
+  /* Unify section width from Publications through Teaching on home */
+  #publications .container {
+    max-width: 62rem;
+  }
+
+  #experience > .mx-auto.w-full.max-w-4xl {
+    max-width: 62rem;
+  }
+
+  #projects .container {
+    max-width: 62rem;
+  }
+
+  #teaching .container {
+    max-width: 62rem;
+  }
+
+  /* Prevent an oversized single teaching card */
+  #teaching .container > *:only-child {
+    width: 100%;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>

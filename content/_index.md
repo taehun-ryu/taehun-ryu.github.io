@@ -47,7 +47,7 @@ sections:
           - publications
         exclude_featured: false
     design:
-      view: citation
+      view: citation_with_image
   - block: resume-experience
     id: experience
     content:
