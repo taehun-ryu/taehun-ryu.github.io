@@ -1,0 +1,21 @@
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (window.location.pathname !== "/") return;
+
+    var bioSection = document.getElementById("section-resume-biography-3");
+    if (!bioSection) return;
+
+    var rightColumn = bioSection.querySelector(".md\\:col-span-8");
+    if (!rightColumn) return;
+
+    var educationBlock = Array.from(rightColumn.children).find(function (child) {
+      var heading = child.querySelector(":scope > .flex.items-center.gap-4.mb-8 > h3");
+      var cardGrid = child.querySelector(":scope > .grid");
+      return !!heading && !!cardGrid;
+    });
+
+    if (educationBlock) {
+      educationBlock.remove();
+    }
+  });
+</script>

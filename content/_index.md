@@ -7,7 +7,7 @@ type: landing
 
 design:
   # Default section spacing
-  spacing: '4rem'
+  spacing: '3rem'
 
 sections:
   - block: resume-biography-3
@@ -31,7 +31,7 @@ sections:
 
       # Name heading sizing to accommodate long or short names
       name:
-        size: md # Options: xs, sm, md, lg (default), xl
+        size: sm # Options: xs, sm, md, lg (default), xl
 
       # Avatar customization
       avatar:
@@ -64,17 +64,6 @@ sections:
       filters:
         folders:
           - projects
-        exclude_featured: false
-    design:
-      view: card
-  - block: collection
-    id: teaching
-    content:
-      title: Teaching
-      count: 2
-      filters:
-        folders:
-          - teaching
         exclude_featured: false
     design:
       view: card

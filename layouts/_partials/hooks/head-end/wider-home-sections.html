@@ -1,4 +1,18 @@
 <style>
+  /* Make the homepage sections more compact */
+  #section-resume-biography-3,
+  #publications,
+  #experience,
+  #projects,
+  #teaching {
+    --hb-spacing-section: 1.75rem;
+  }
+
+  #section-resume-biography-3 .resume-biography {
+    padding-top: clamp(1.75rem, 4vw, 3rem);
+    padding-bottom: clamp(1.75rem, 4vw, 3rem);
+  }
+
   /* Unify section width from Publications through Teaching on home */
   #publications .container {
     max-width: 62rem;
