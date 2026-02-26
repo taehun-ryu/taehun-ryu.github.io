@@ -1,0 +1,26 @@
+<style>
+  .prose .project-meta-note {
+    display: inline-block;
+    margin: 0.25rem 0 1rem;
+    padding: 0.2rem 0.55rem 0.2rem 0.5rem;
+    border-left: 2px solid var(--color-primary-500);
+    border-radius: 0 0.35rem 0.35rem 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: none;
+    line-height: 1.25;
+    color: color-mix(in srgb, currentColor 60%, transparent);
+    background: color-mix(in srgb, currentColor 6%, transparent);
+  }
+
+  /* Pull the label closer to the featured image on project detail pages. */
+  .article-header.featured-image-wrapper + .prose .project-meta-note {
+    margin-top: -2.5rem;
+  }
+
+  .dark .prose .project-meta-note {
+    color: color-mix(in srgb, currentColor 75%, transparent);
+    background: color-mix(in srgb, currentColor 12%, transparent);
+  }
+</style>

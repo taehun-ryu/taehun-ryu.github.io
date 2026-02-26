@@ -14,16 +14,6 @@ tags:
   - Navigation
   - Undergraduate
 ---
-#### *Undergraduate project at Hanyang Univ.
+<p class="project-meta-note">Undergraduate project at Hanyang Univ.</p>
 
-This project developed a table-robot system aimed at complete automation of restaurant hall operations.
-
-## Key Scope
-
-- End-to-end hall automation workflow design
-- Robot behavior integration for service scenarios
-- System-level validation for real-world operation
-
-## Repository
-
-- [TableRobotSystem-hive](https://github.com/BEYOND-thelimit/TableRobotSystem-hive.git)
+TBD

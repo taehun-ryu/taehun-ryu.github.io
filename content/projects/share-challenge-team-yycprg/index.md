@@ -11,23 +11,6 @@ tags:
   - Person Following
   - Undergraduate
 ---
-#### *Undergraduate project at Hanyang Univ.
+<p class="project-meta-note">Undergraduate project at Hanyang Univ.</p>
 
-This project focused on building a practical and cost-efficient autonomous cart system for large indoor retail environments.
-
-## What We Built
-
-- A central main system for global perception and path planning
-- Lightweight carts with local control and obstacle handling
-- A communication bridge between the main server and each cart
-
-## Technical Highlights
-
-- Unified coordinate system from multiple cameras
-- Human tracking and position estimation in large spaces
-- Obstacle avoidance using dual LiDAR sensors
-- Hybrid localization using wheel encoders and ArUco markers
-
-## Repository
-
-- [ShareChallenge\_team\_yycprg](https://github.com/taehun-ryu/ShareChallenge_team_yycprg.git)
+TBD

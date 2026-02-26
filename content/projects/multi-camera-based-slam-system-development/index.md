@@ -11,15 +11,9 @@ tags:
   - Multi-Camera Calibration
   - Robotics
 ---
-#### *Research project at UNIST.
+<p class="project-meta-note">Research project at UNIST.</p>
 
-This project focused on multi-camera-based SLAM system development.
-
-## What I Worked On
-
-- Multi-camera data handling and synchronization
-- Visual localization and mapping pipeline design
-- System-level validation in indoor environments
+TBD
 
 ## References
 
