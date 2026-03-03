@@ -30,7 +30,7 @@ summary: Accepted to CVPR 2026.
 
 tags:
   - Event Camera
-  - Calibration
+  - Calibration`
   - Checkerboard
 featured: false
 
@@ -43,13 +43,13 @@ links:
     url: "/publications/cvpr2026/"
   - type: project
     name: "Project"
-    url: "/publications/cvpr2026/"
+    url: "https://vision3d-lab.github.io/corner2tag/"
   - type: pdf
     name: "Supple"
     url: "/publications/cvpr2026/"
   - type: code
     name: "Code"
-    url: "/publications/cvpr2026/"
+    url: "https://github.com/taehun-ryu/corner2tag"
 
 # Associated Projects (optional).
 #   Associate this publication with one or more of your projects.
