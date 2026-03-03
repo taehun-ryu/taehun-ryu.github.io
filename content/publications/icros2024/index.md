@@ -27,8 +27,8 @@ publishDate: "2024-07-01T00:00:00Z"
 publication_types: ["paper-conference"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*Institute of Control, Robotics and Systems (ICROS)*"
-#publication_short: "*ICROS*"
+publication: "Institute of Control, Robotics and Systems (ICROS)"
+publication_short: "ICROS"
 
 abstract: This paper introduces a Table Robot System aimed at fully automating restaurant service. Utilizing ceiling-mounted cameras, the system enhances object detection and dynamic path planning algorithm, thus reducing labor costs and improving efficiency. Initial findings show significant increases in service speed and reductions in human server dependency, highlighting the system's potential to revolutionize restaurant operations.
 
