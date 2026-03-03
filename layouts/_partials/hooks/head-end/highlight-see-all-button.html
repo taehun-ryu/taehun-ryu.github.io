@@ -1,0 +1,39 @@
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var isHome = window.location.pathname === "/" || window.location.pathname === "";
+    if (!isHome) return;
+
+    function findDownloadCvButton() {
+      var candidates = document.querySelectorAll("a, button");
+      for (var i = 0; i < candidates.length; i += 1) {
+        var text = (candidates[i].textContent || "").trim().toLowerCase();
+        if (text === "download cv") return candidates[i];
+      }
+      return null;
+    }
+
+    function applyReferenceStyle(target, reference) {
+      if (!target || !reference) return;
+      var cls = (reference.className || "").trim();
+      if (cls) {
+        target.className = cls;
+      } else {
+        target.classList.add("btn", "btn-primary");
+      }
+      target.style.removeProperty("text-decoration");
+    }
+
+    var cvButton = findDownloadCvButton();
+    if (cvButton) {
+      localStorage.setItem("hbCvButtonClass", cvButton.className || "");
+    }
+
+    var candidates = document.querySelectorAll("a, button");
+    candidates.forEach(function (el) {
+      var text = (el.textContent || "").trim().toLowerCase();
+      if (text === "see all" || text.startsWith("see all ")) {
+        applyReferenceStyle(el, cvButton);
+      }
+    });
+  });
+</script>

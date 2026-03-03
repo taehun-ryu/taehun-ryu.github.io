@@ -1,4 +1,4 @@
-{{- $item := .item -}}
+﻿{{- $item := .item -}}
 {{- $authors := $item.Params.authors | default (slice) -}}
 {{- $notes := $item.Params.author_notes | default (slice) -}}
 {{- $total := len $authors -}}
@@ -21,7 +21,7 @@
         {{- end -}}
       {{- end -}}
 
-      <span>{{ $name }}</span>
+      {{- if eq $author "me" -}}<strong>{{ $name }}</strong>{{- else -}}<span>{{ $name }}</span>{{- end -}}
 
       {{- if lt $idx (len $notes) -}}
         {{- $note := index $notes $idx -}}

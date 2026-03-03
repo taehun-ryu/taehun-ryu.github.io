@@ -1,7 +1,7 @@
 ---
 title: Multi-camera-based SLAM System Development
 date: 2025-02-28
-summary: "Developed a multi-camera-based SLAM pipeline for robust localization and mapping in indoor environments."
+summary: "Apply SSC-based ANMS to the ORB keypoint selection stage in the ORB-SLAM3 pipeline to improve tracking stability and map point distribution."
 links:
   - type: code
     url: https://github.com/taehun-ryu/ORB_SLAM3_ANMS

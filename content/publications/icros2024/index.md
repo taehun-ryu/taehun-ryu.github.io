@@ -32,9 +32,6 @@ publication: "*Institute of Control, Robotics and Systems (ICROS)*"
 
 abstract: This paper introduces a Table Robot System aimed at fully automating restaurant service. Utilizing ceiling-mounted cameras, the system enhances object detection and dynamic path planning algorithm, thus reducing labor costs and improving efficiency. Initial findings show significant increases in service speed and reductions in human server dependency, highlighting the system's potential to revolutionize restaurant operations.
 
-# Summary. An optional shortened abstract.
-summary: TBD
-
 tags:
 - Multi-Robot System
 - Infrastructure-based Perception
