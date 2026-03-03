@@ -1,0 +1,20 @@
+<style>
+  /* Publications section on homepage */
+  #publications,
+  #publications * {
+    font-family: "Times New Roman", "신명조", "Shin Myungjo", Times, serif;
+  }
+
+  /* Publication list/detail pages */
+  body.publication-font,
+  body.publication-font * {
+    font-family: "Times New Roman", "신명조", "Shin Myungjo", Times, serif;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (!/^\/publications(\/|$)/.test(window.location.pathname)) return;
+    document.body.classList.add("publication-font");
+  });
+</script>
