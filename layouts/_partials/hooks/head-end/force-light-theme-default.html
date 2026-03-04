@@ -1,0 +1,14 @@
+<script>
+  (function () {
+    var root = document.documentElement;
+    if (!root || root.dataset.wcThemeDefault !== "light") return;
+
+    // Prevent stale user preference from overriding a site-wide light default.
+    try {
+      localStorage.removeItem("wc-color-theme");
+    } catch (e) {}
+
+    root.classList.remove("dark");
+    root.style.colorScheme = "light";
+  })();
+</script>

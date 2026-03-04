@@ -13,9 +13,9 @@ author_notes:
 - "Equal contribution"
 - "Equal contribution"
 - "Equal contribution"
+- "Equal contribution; Corresponding author"
 - "Equal contribution"
-- "Equal contribution"
-- "Corresponding author"
+- ""
 date: "2024-07-01T00:00:00Z"
 
 # Schedule page publish date (NOT publication's date).
@@ -56,7 +56,7 @@ links:
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 image:
-  caption: "caption"
+  caption: "overview"
   focal_point: ""
   preview_only: false
 
@@ -65,8 +65,7 @@ image:
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
-projects:
-  - table-robot-system-hive
+projects: []
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.
@@ -75,4 +74,6 @@ projects:
 #   Otherwise, set `slides: ""`.
 slides: ""
 ---
-Received the Undergraduate Paper Award.
+
+## Note
+Received the **Undergraduate Student Paper Award**.

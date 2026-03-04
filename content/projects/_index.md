@@ -12,15 +12,15 @@ sections:
   - block: collection
     content:
       title: Projects
-      text: I enjoy making things. Here are projects that I have worked on over the years.
+      text: Here are projects that I have worked on over the years.
       filters:
         folders:
           - projects
     design:
       view: article-grid
-      fill_image: false
-      columns: 3
-      show_date: false
+      fill_image: true
+      columns: 2
+      show_date: true
       show_read_time: false
-      show_read_more: false
+      show_read_more: true
 ---

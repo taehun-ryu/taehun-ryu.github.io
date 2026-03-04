@@ -48,6 +48,13 @@ links:
     name: "Code"
     url: "https://github.com/taehun-ryu/corner2tag"
 
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+image:
+  caption: "Illustration of proposed pattern detection"
+  focal_point: ""
+  preview_only: false
+
 # Associated Projects (optional).
 #   Associate this publication with one or more of your projects.
 #   Simply enter your project's folder or file name without extension.

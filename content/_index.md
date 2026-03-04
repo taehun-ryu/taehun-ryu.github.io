@@ -56,6 +56,11 @@ sections:
     design:
       date_format: 'January 2006'
       is_education_first: false
+  # - block: resume-awards
+  #   id: awards
+  #   content:
+  #     title: Awards
+  #     username: me
   - block: collection
     id: projects
     content:
