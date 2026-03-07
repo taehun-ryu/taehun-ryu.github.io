@@ -18,7 +18,7 @@ sections:
       # Show a call-to-action button under your biography? (optional)
       button:
         text: Download CV
-        url: /uploads/cv_250728.pdf
+        url: /uploads/taehunryu_CV_260308.pdf
       headings:
         about: 'Research Profile'
         education: ''
