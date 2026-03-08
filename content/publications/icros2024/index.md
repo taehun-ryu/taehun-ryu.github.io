@@ -9,12 +9,12 @@ authors:
 - 배승학
 - 김완수
 author_notes:
-- "Equal contribution"
-- "Equal contribution"
-- "Equal contribution"
-- "Equal contribution"
-- "Equal contribution; Corresponding author"
-- "Equal contribution"
+- ""
+- ""
+- ""
+- ""
+- "Corresponding author"
+- ""
 - ""
 date: "2024-07-01T00:00:00Z"
 

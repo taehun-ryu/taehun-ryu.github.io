@@ -1,7 +1,7 @@
 ---
-title: Multi-camera-based SLAM System Development
-date: 2025-02-28
-summary: "Apply SSC-based ANMS to the ORB keypoint selection stage in the ORB-SLAM3 pipeline to improve tracking stability and map point distribution."
+title: Stereo Visual SLAM Enhancement
+date: 2024-11-28
+summary: "Integrated SSC-based ANMS into the ORB keypoint selection stage of ORB-SLAM3 to promote spatially balanced feature selection and improve tracking stability."
 links:
   - type: code
     url: https://github.com/taehun-ryu/ORB_SLAM3_ANMS
@@ -13,7 +13,7 @@ tags:
 ---
 <p class="project-meta-note">Research project at UNIST.</p>
 
-TBD
+TBA
 
 ## References
 
