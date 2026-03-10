@@ -1,0 +1,153 @@
+<style>
+  .author-notes {
+    cursor: help;
+  }
+
+  .author-note-floating-tooltip {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, calc(-100% - 10px));
+    transition: opacity 140ms ease, transform 140ms ease;
+    padding: 0.38rem 0.56rem;
+    border-radius: 0.58rem;
+    border: 1px solid rgba(100, 116, 139, 0.45);
+    background: rgba(15, 23, 42, 0.96);
+    color: #f8fafc;
+    font-size: 0.78rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    box-shadow: 0 10px 28px rgba(2, 6, 23, 0.34);
+  }
+
+  .author-note-floating-tooltip.is-visible {
+    opacity: 1;
+  }
+
+  .author-note-floating-tooltip.is-below {
+    transform: translate(-50%, 10px);
+  }
+
+  .dark .author-note-floating-tooltip {
+    border-color: rgba(148, 163, 184, 0.46);
+    background: rgba(15, 23, 42, 0.98);
+    color: #e2e8f0;
+  }
+</style>
+
+<script>
+  (() => {
+    if (window.__authorNoteFloatingTooltipInit) return;
+    window.__authorNoteFloatingTooltipInit = true;
+
+    const tooltip = document.createElement('div');
+    tooltip.className = 'author-note-floating-tooltip';
+    tooltip.setAttribute('role', 'tooltip');
+    tooltip.hidden = true;
+
+    let active = null;
+
+    const ensureMounted = () => {
+      if (!tooltip.isConnected && document.body) {
+        document.body.appendChild(tooltip);
+      }
+    };
+
+    const position = (el) => {
+      if (!el || !tooltip.isConnected) return;
+
+      const rect = el.getBoundingClientRect();
+      let x = rect.left + rect.width / 2;
+      let y = rect.top;
+
+      tooltip.style.left = `${x}px`;
+      tooltip.style.top = `${y}px`;
+      tooltip.classList.remove('is-below');
+
+      const tip = tooltip.getBoundingClientRect();
+      const pad = 8;
+
+      if (tip.left < pad) x += (pad - tip.left);
+      if (tip.right > window.innerWidth - pad) x -= (tip.right - (window.innerWidth - pad));
+
+      let placeBelow = false;
+      if (tip.top < pad) {
+        placeBelow = true;
+        y = rect.bottom;
+      }
+
+      tooltip.style.left = `${x}px`;
+      tooltip.style.top = `${y}px`;
+      tooltip.classList.toggle('is-below', placeBelow);
+    };
+
+    const show = (el) => {
+      const text = el?.getAttribute('data-author-note');
+      if (!text) return;
+
+      ensureMounted();
+      active = el;
+      tooltip.textContent = text;
+      tooltip.hidden = false;
+      position(el);
+      requestAnimationFrame(() => tooltip.classList.add('is-visible'));
+    };
+
+    const hide = () => {
+      active = null;
+      tooltip.classList.remove('is-visible');
+      setTimeout(() => {
+        if (!active) tooltip.hidden = true;
+      }, 160);
+    };
+
+    const findNoteTarget = (target) => target?.closest?.('.author-notes[data-author-note]') || null;
+
+    document.addEventListener('pointerenter', (e) => {
+      const target = findNoteTarget(e.target);
+      if (!target) return;
+      show(target);
+    }, true);
+
+    document.addEventListener('pointerleave', (e) => {
+      const target = findNoteTarget(e.target);
+      if (!target) return;
+      hide();
+    }, true);
+
+        document.addEventListener('click', (e) => {
+      const target = findNoteTarget(e.target);
+      if (!target) return;
+      e.preventDefault();
+      e.stopPropagation();
+    }, true);
+    document.addEventListener('focusin', (e) => {
+      const target = findNoteTarget(e.target);
+      if (!target) return;
+      show(target);
+    });
+
+    document.addEventListener('focusout', (e) => {
+      const target = findNoteTarget(e.target);
+      if (!target) return;
+      hide();
+    });
+
+    window.addEventListener('scroll', () => {
+      if (active) position(active);
+    }, true);
+
+    window.addEventListener('resize', () => {
+      if (active) position(active);
+    });
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) hide();
+    });
+
+    ensureMounted();
+  })();
+</script>

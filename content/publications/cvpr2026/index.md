@@ -1,4 +1,4 @@
----
+﻿---
 title: "From Corners to Fiducial Tags: Revisiting Checkerboard Calibration for Event Cameras"
 authors:
   - me
@@ -20,10 +20,10 @@ publication_types: ["paper-conference"]
 
 # Publication name and optional abbreviated publication name.
 publication: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
-publication_short: "CVPR"
+#publication_short: "CVPR"
 
-abstract: |
-  The conventional checkerboard-based calibration for standard cameras faces fundamental limitations when applied to bio-inspired event cameras. Specifically, this stems from two challenges: (i) Events are triggered asynchronously at different timestamps along motion trajectories. If we accumulate them directly on the image plane, it causes temporal misalignment and produces blurred edges. Directly accumulating them on the image plane causes temporal misalignment and produces blurred edges. (ii) Checkerboard corners on event cameras show near-zero event occurrence at the corner itself. This hinders reliable corner localization and makes calibration difficult. To address these issues, we present a novel calibration framework that directly detects checkerboard corners from a raw event stream. We first mathematically analyze the absence of events at corner points. Based on this fact, we then leverage edge-driven event cues to initialize corner positions. Using the near-zero event occurrence at checkerboard corners, we gradually refine the estimated corner toward low event-density regions, achieving sub-pixel accuracy. Furthermore, we extend the corner detection to fiducial markers such as AprilTags, resulting in reliable detection even under partial visibility or occlusion. Evaluations on self-collected and public data demonstrate reliable checkerboard corner detection and stable camera calibration.
+summary: |
+  We propose a checkerboard-based calibration method for event cameras with a mathematical analysis of the event generation rate.
 
 tags:
   - Event Camera
@@ -32,24 +32,18 @@ tags:
 featured: false
 
 links:
-  - type: source
-    name: "Site"
-    url: "/publications/cvpr2026/"
   - type: pdf
-    name: "Paper"
-    url: "/publications/cvpr2026/"
+    name: "Paper (TBU)"
+    url: ""
   - type: project
     name: "Project"
     url: "https://vision3d-lab.github.io/corner2tag/"
-  - type: pdf
-    name: "Supple"
-    url: "/publications/cvpr2026/"
   - type: code
     name: "Code"
     url: "https://github.com/taehun-ryu/corner2tag"
 
 # Featured image
-# To use, add an image named `featured.jpg/png` to your page's folder.
+# To use, add an image named featured.jpg/png to your page's folder.
 image:
   caption: "Illustration of proposed pattern detection"
   focal_point: ""
@@ -58,14 +52,14 @@ image:
 # Associated Projects (optional).
 #   Associate this publication with one or more of your projects.
 #   Simply enter your project's folder or file name without extension.
-#   E.g. `internal-project` references `content/project/internal-project/index.md`.
-#   Otherwise, set `projects: []`.
+#   E.g. internal-project references content/project/internal-project/index.md.
+#   Otherwise, set projects: [].
 projects: []
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.
 #   Simply enter your slide deck's filename without extension.
-#   E.g. `slides: "example"` references `content/slides/example/index.md`.
-#   Otherwise, set `slides: ""`.
+#   E.g. slides: "example" references content/slides/example/index.md.
+#   Otherwise, set slides: "".
 slides: ""
 ---

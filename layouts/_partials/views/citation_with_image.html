@@ -1,7 +1,8 @@
-﻿{{- $item := .item -}}
+{{- $item := .item -}}
 {{- $authors := $item.Params.authors | default (slice) -}}
 {{- $notes := $item.Params.author_notes | default (slice) -}}
 {{- $total := len $authors -}}
+{{- $venue := ($item.Params.publication_short | default $item.Params.publication) -}}
 {{- $image := $item.Resources.GetMatch "featured*" -}}
 {{- if not $image -}}
   {{- $image = $item.Resources.GetMatch "cover*" -}}
@@ -14,42 +15,43 @@
   {{- $thumb = $image.Fit "640x360" -}}
 {{- end -}}
 
-<div class="pub-list-item view-citation-with-image" style="margin-bottom: 2.25rem">
-  <div class="flex flex-col md:flex-row md:items-stretch gap-6">
+<div class="pub-list-item view-citation-with-image">
+  <div class="pub-card-shell flex flex-col md:flex-row md:items-stretch gap-6">
     {{- if $thumb -}}
-      <a
-        href="{{ $item.RelPermalink }}"
-        class="flex w-full md:w-[35%] shrink-0 items-center justify-center overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-white"
+      <div
+        class="pub-thumb-shell flex w-full md:w-[35%] shrink-0 items-center justify-center overflow-hidden bg-white"
       >
         <img
           src="{{ $thumb.RelPermalink }}"
           alt="{{ $item.Title }}"
           width="{{ $thumb.Width }}"
           height="{{ $thumb.Height }}"
-          class="w-auto h-auto max-w-full object-contain object-center bg-white md:max-h-full"
+          class="pub-thumb-image w-auto h-auto max-w-full object-contain object-center bg-white md:max-h-full"
           loading="lazy"
         />
-      </a>
+      </div>
     {{- end -}}
 
-    <div class="min-w-0 flex-1">
-      <div class="text-lg leading-relaxed">
-        <span class="article-metadata li-cite-author">
-          {{- range $idx, $author := $authors -}}
-            {{- $name := $author -}}
-            {{- if eq $author "me" -}}
-              {{- with $item.Site.Data.authors.me.name.display -}}
+    <div class="min-w-0 flex-1 pub-main">
+      <h3 class="pub-title">{{ $item.Title }}</h3>
+
+      <p class="pub-authors article-metadata li-cite-author">
+        {{- range $idx, $author := $authors -}}
+          {{- $name := $author -}}
+          {{- if eq $author "me" -}}
+            {{- with $item.Site.Data.authors.me.name.display -}}
+              {{- $name = . -}}
+            {{- end -}}
+          {{- else -}}
+            {{- with index $item.Site.Data.authors $author -}}
+              {{- with .name.display -}}
                 {{- $name = . -}}
               {{- end -}}
-            {{- else -}}
-              {{- with index $item.Site.Data.authors $author -}}
-                {{- with .name.display -}}
-                  {{- $name = . -}}
-                {{- end -}}
-              {{- end -}}
             {{- end -}}
+          {{- end -}}
 
-            {{- if eq $author "me" -}}<strong>{{ $name }}</strong>{{- else -}}<span>{{ $name }}</span>{{- end -}}
+          <span class="pub-author-item inline-flex items-center">
+            {{- if eq $author "me" -}}<span class="pub-author-me">{{ $name }}</span>{{- else -}}<span class="pub-author">{{ $name }}</span>{{- end -}}
 
             {{- if lt $idx (len $notes) -}}
               {{- $note := index $notes $idx -}}
@@ -58,20 +60,26 @@
               {{- end -}}
             {{- end -}}
 
-            {{ if lt $idx (sub $total 1) }}{{ if eq $idx (sub $total 2) }}, and {{ else }}, {{ end }}{{ end }}
-          {{- end -}}
-        </span>. <a href="{{ $item.RelPermalink }}" class="underline">{{ $item.Title }}</a>. {{ with ($item.Params.publication_short | default $item.Params.publication) }}<em>{{ . | markdownify | plainify }}</em>. {{ end }}{{ $item.Date.Format "2006" }}.
-      </div>
+            {{- if lt $idx (sub $total 1) -}}<span class="pub-author-separator">,</span>{{- end -}}
+          </span>
+        {{- end -}}
+      </p>
 
-      <div class="mt-2 flex flex-wrap space-x-3">
+      <p class="pub-venue">
+        {{- with $venue -}}<em>{{ . | markdownify | plainify }}</em>{{- end -}}
+        <span class="pub-year">{{ if $venue }}, {{ end }}{{ $item.Date.Format "2006" }}</span>
+      </p>
+
+      <div class="pub-links mt-2 flex flex-wrap gap-x-3 gap-y-2">
         {{ partial "page_links" (dict "page" $item "is_list" 1) }}
       </div>
 
-      {{- with $item.Params.abstract -}}
-        {{- $summary := . | markdownify | plainify | truncate 180 -}}
-        <p class="mt-3 text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-          {{ $summary }}
-        </p>
+      {{- $summaryRaw := $item.Params.summary | default $item.Params.abstract -}}
+      {{- with $summaryRaw -}}
+        {{- $summaryText := replaceRE `\[\[([^\[\]]+)\]\]` `$1` . -}}
+        <div class="pub-summary">
+          {{ $summaryText | markdownify }}
+        </div>
       {{- end -}}
     </div>
   </div>

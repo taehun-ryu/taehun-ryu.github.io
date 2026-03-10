@@ -1,4 +1,4 @@
-﻿{{- $item := .item -}}
+{{- $item := .item -}}
 {{- $authors := $item.Params.authors | default (slice) -}}
 {{- $notes := $item.Params.author_notes | default (slice) -}}
 {{- $total := len $authors -}}
@@ -32,7 +32,7 @@
 
       {{ if lt $idx (sub $total 1) }}{{ if eq $idx (sub $total 2) }}, and {{ else }}, {{ end }}{{ end }}
     {{- end -}}
-  </span>. <a href="{{ $item.RelPermalink }}" class="underline">{{ $item.Title }}</a>. {{ with ($item.Params.publication_short | default $item.Params.publication) }}<em>{{ . | markdownify | plainify }}</em>. {{ end }}{{ $item.Date.Format "2006" }}.
+  </span>. <span>{{ $item.Title }}</span>. {{ with ($item.Params.publication_short | default $item.Params.publication) }}<em>{{ . | markdownify | plainify }}</em>. {{ end }}{{ $item.Date.Format "2006" }}.
 
   <div class="flex flex-wrap space-x-3">
     {{ partial "page_links" (dict "page" $item "is_list" 1) }}

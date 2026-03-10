@@ -8,6 +8,8 @@ authors:
 - me
 - 배승학
 - 김완수
+# Only "Equal contribution" or "Corresponding author"
+# both of them: e.g. "Corresponding author, Equal contribution"
 author_notes:
 - ""
 - ""
@@ -28,9 +30,9 @@ publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
 publication: "Institute of Control, Robotics and Systems (ICROS)"
-publication_short: "ICROS"
+#publication_short: "ICROS"
 
-abstract: This paper introduces a Table Robot System aimed at fully automating restaurant service. Utilizing ceiling-mounted cameras, the system enhances object detection and dynamic path planning algorithm, thus reducing labor costs and improving efficiency. Initial findings show significant increases in service speed and reductions in human server dependency, highlighting the system's potential to revolutionize restaurant operations.
+summary: This paper presents a table robot system for restaurant hall automation that combines ceiling-camera perception with dynamic path planning to improve service speed and reduce reliance on human servers.
 
 tags:
 - Multi-Robot System
@@ -39,9 +41,6 @@ tags:
 featured: false
 
 links:
-  - type: source
-    name: "Site"
-    url: "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11909262"
   - type: pdf
     name: "Paper"
     url: "/uploads/icros2024.pdf"
