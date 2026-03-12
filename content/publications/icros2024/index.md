@@ -31,6 +31,7 @@ publication_types: ["article-journal"]
 # Publication name and optional abbreviated publication name.
 publication: "Institute of Control, Robotics and Systems (ICROS)"
 #publication_short: "ICROS"
+note: "Undergraduate Student Paper Award"
 
 summary: This paper presents a table robot system for restaurant hall automation that combines ceiling-camera perception with dynamic path planning to improve service speed and reduce reliance on human servers.
 
@@ -73,6 +74,3 @@ projects: []
 #   Otherwise, set `slides: ""`.
 slides: ""
 ---
-
-## Note
-Received the **Undergraduate Student Paper Award**.

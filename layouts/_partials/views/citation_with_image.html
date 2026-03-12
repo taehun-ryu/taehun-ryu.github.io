@@ -3,6 +3,7 @@
 {{- $notes := $item.Params.author_notes | default (slice) -}}
 {{- $total := len $authors -}}
 {{- $venue := ($item.Params.publication_short | default $item.Params.publication) -}}
+{{- $pubNote := $item.Params.note -}}
 {{- $image := $item.Resources.GetMatch "featured*" -}}
 {{- if not $image -}}
   {{- $image = $item.Resources.GetMatch "cover*" -}}
@@ -66,8 +67,14 @@
       </p>
 
       <p class="pub-venue">
-        {{- with $venue -}}<em>{{ . | markdownify | plainify }}</em>{{- end -}}
-        <span class="pub-year">{{ if $venue }}, {{ end }}{{ $item.Date.Format "2006" }}</span>
+        <span class="pub-venue-line">
+          {{- with $venue -}}<em>{{ . | markdownify | plainify }}</em>{{- end -}}
+          <span class="pub-year">{{ if $venue }}, {{ end }}{{ $item.Date.Format "2006" }}</span>
+        </span>
+        {{- with $pubNote -}}
+          <br />
+          <span class="pub-note">{{ . | markdownify | plainify }}</span>
+        {{- end -}}
       </p>
 
       <div class="pub-links mt-2 flex flex-wrap gap-x-3 gap-y-2">
