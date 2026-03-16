@@ -1,5 +1,5 @@
----
-title: Stereo Visual SLAM Enhancement
+﻿---
+title: Visual SLAM Enhancement
 date: 2024-11-28
 summary: "Integrated SSC-based ANMS into the ORB keypoint selection stage of ORB-SLAM3 to promote spatially balanced feature selection and improve tracking stability."
 links:

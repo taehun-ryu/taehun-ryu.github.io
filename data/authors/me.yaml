@@ -1,4 +1,4 @@
-schema: hugoblox/author/v1
+﻿schema: hugoblox/author/v1
 slug: me
 is_owner: true
 name:
@@ -56,7 +56,7 @@ experience:
     start: 2024-07-01
     end: 2025-02-28
     summary: |
-      Conducted an industry-academia project at 3D Vision & Robotics Lab in collaboration with CLOBOT on multi-camera-based SLAM system development.
+      Executed the industry-academia project "Development and Research of a Multi-Camera-Based SLAM System" at the 3D Vision & Robotics Lab, supported by CLOBOT (May-November 2024).
 
 skills:
   - name: Technical Skills
@@ -91,3 +91,4 @@ awards:
   #   summary: |
   #     Awarded for groundbreaking work on efficient training of large models.
   #   icon: hero/trophy
+

@@ -48,10 +48,6 @@ links:
   # - type: pdf
   #   name: "Supplementary Material"
   #   url: "/uploads/icros2024.pdf"
-  - type: project
-    url: "https://github.com/BEYOND-thelimit/TableRobotSystem-hive?tab=readme-ov-file"
-  # - type: code
-  #   url: "https://github.com/BEYOND-thelimit/TableRobotSystem-hive?tab=readme-ov-file"
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.

@@ -1,5 +1,5 @@
 ---
-title: Multi-Robot Localization and Tracking
+title: Table Robot System for Complete Restaurant Hall Automation
 date: 2024-05-29
 summary: "Developed a hybrid localization framework combining robot-internal EKF estimates (IMU, wheel encoder, and LiDAR) with ceiling-camera observations."
 links:
