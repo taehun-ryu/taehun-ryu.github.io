@@ -34,8 +34,8 @@ featured: false
 
 links:
   - type: pdf
-    name: "Paper (TBU)"
-    url: ""
+    name: "Paper"
+    url: "/uploads/cvpr2026.pdf"
   - type: project
     name: "Project"
     url: "https://vision3d-lab.github.io/corner2tag/"
