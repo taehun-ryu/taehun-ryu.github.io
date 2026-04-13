@@ -21,7 +21,7 @@ publication_types: ["paper-conference"]
 # Publication name and optional abbreviated publication name.
 publication: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
 #publication_short: "CVPR"
-note: ""
+note: "Highlight"
 
 summary: |
   We propose a checkerboard-based calibration method for event cameras with a mathematical analysis of the event generation rate.
