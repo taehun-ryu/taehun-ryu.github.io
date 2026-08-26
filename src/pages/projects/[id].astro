@@ -1,0 +1,42 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map((project) => ({ params: { id: project.id }, props: { project } }));
+}
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+const title = `${project.data.title} — Taehun Ryu`;
+const image = new URL(project.data.image, Astro.site).href;
+---
+
+<BaseLayout socialTitle={title} description={project.data.summary} image={image}>
+  <Header />
+  <main class="project-detail shell">
+    <a class="back-link" href="/#projects">← All projects</a>
+    <header class="project-detail-header">
+      <p class="eyebrow">{project.data.affiliation}</p>
+      <h1>{project.data.title}</h1>
+      <p class="project-lede">{project.data.summary}</p>
+      <div class="project-detail-links">
+        <a href={project.data.code}>View code ↗</a>
+      </div>
+    </header>
+    <figure class="project-hero-image">
+      <img src={project.data.image} alt={project.data.imageAlt} />
+    </figure>
+    <article class="prose">
+      <Content />
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>

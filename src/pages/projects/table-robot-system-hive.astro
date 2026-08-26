@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const target = '/projects/table-robot/';
+---
+
+<BaseLayout>
+  <main class="redirect-page shell">
+    <p>Redirecting to <a href={target}>Table Robot System for Restaurant Automation</a>.</p>
+  </main>
+  <script is:inline define:vars={{ target }}>window.location.replace(target);</script>
+</BaseLayout>

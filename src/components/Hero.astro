@@ -1,0 +1,51 @@
+---
+import { affiliations } from '../data/affiliations';
+---
+
+<section class="hero shell" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="eyebrow">ROBOTICS RESEARCHER</p>
+    <h1 id="hero-title">Taehun Ryu</h1>
+    <p class="hero-statement">
+      I work on event-based robot vision, sensor calibration, and geometric perception for robotics.
+    </p>
+    <p class="hero-affiliation">
+      Ph.D. student at <a href="https://aigs.unist.ac.kr/eng/index.php">UNIST</a>,
+      working in the <a href="https://unist.info/">3D Vision &amp; Robotics Lab</a>.
+    </p>
+    <div class="hero-links" aria-label="Researcher links">
+      <a href="https://scholar.google.co.kr/citations?user=8GJ5ShoAAAAJ&hl=ko">
+        <svg class="hero-link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m2.5 9.25 9.5-5 9.5 5-9.5 5-9.5-5Z" /><path d="M6 11.1V16l6 3.2 6-3.2v-4.9" /><path d="M21.5 9.4V15" /></svg>
+        <span>Scholar</span>
+      </a>
+      <a href="https://github.com/taehun-ryu">
+        <svg class="hero-link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.75a9.25 9.25 0 0 0-2.93 18.02c.46.08.63-.2.63-.44v-1.7c-2.57.56-3.11-1.09-3.11-1.09-.42-1.07-1.03-1.35-1.03-1.35-.84-.58.06-.57.06-.57.93.07 1.42.96 1.42.96.83 1.42 2.17 1.01 2.7.77.08-.6.32-1.01.59-1.24-2.05-.23-4.21-1.03-4.21-4.57 0-1.01.36-1.83.96-2.48-.1-.24-.42-1.18.09-2.46 0 0 .78-.25 2.55.95A8.82 8.82 0 0 1 12 7.24c.77 0 1.54.1 2.26.3 1.77-1.2 2.55-.95 2.55-.95.51 1.28.19 2.22.1 2.46.59.65.95 1.47.95 2.48 0 3.55-2.16 4.33-4.22 4.56.33.28.63.83.63 1.68v2.49c0 .25.17.53.64.44A9.25 9.25 0 0 0 12 2.75Z" /></svg>
+        <span>GitHub</span>
+      </a>
+      <a href="https://www.linkedin.com/in/taehunryu/">
+        <svg class="hero-link-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="2" /><circle cx="8" cy="8.25" r="0.7" fill="currentColor" stroke="none" /><path d="M8 10.75v5M11.25 15.75v-5M11.25 12.9c.45-1.45 4.75-1.8 4.75 1.3v1.55" /></svg>
+        <span>LinkedIn</span>
+      </a>
+      <a href="/uploads/taehunryu_CV_260308.pdf">
+        <svg class="hero-link-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 2.75h7l4 4v14.5H6.5z" /><path d="M13.5 2.75v4h4M9.25 12h5.5M9.25 15.5h5.5" /></svg>
+        <span>CV</span>
+      </a>
+      <a href="mailto:xogns2079@gmail.com">
+        <svg class="hero-link-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="1.5" /><path d="m4 7 8 6 8-6" /></svg>
+        <span>Email</span>
+      </a>
+    </div>
+    <div class="affiliation-strip" aria-label="Organizations">
+      <div class="affiliation-logos">
+        {affiliations.map((affiliation) => (
+          <a class="affiliation-logo-link" href={affiliation.href} aria-label={affiliation.name}>
+            <img class="affiliation-logo" src={affiliation.logo} alt={affiliation.name} />
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+  <figure class="portrait-wrap">
+    <img src="/images/taehun-ryu.png" alt="Portrait of Taehun Ryu" />
+  </figure>
+</section>

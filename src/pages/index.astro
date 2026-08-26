@@ -1,0 +1,72 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import PublicationRow from '../components/PublicationRow.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import About from '../components/About.astro';
+import Footer from '../components/Footer.astro';
+
+const publications = (await getCollection('publications')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+
+const publicationTypeLabels = [
+  { type: 'conference', singular: 'Conference Paper', plural: 'Conference Papers' },
+  { type: 'journal', singular: 'Journal Article', plural: 'Journal Articles' },
+] as const;
+
+const publicationSummary = publicationTypeLabels
+  .map(({ type, singular, plural }) => {
+    const count = publications.filter((publication) => publication.data.publicationType === type).length;
+    return count > 0 ? `${count} ${count === 1 ? singular : plural}` : null;
+  })
+  .filter((label): label is string => label !== null)
+  .join(' \u00b7 ');
+
+const projects = (await getCollection('projects'))
+  .filter((project) => project.data.featured)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const education = (await getCollection('education')).sort(
+  (a, b) => b.data.start.valueOf() - a.data.start.valueOf(),
+);
+
+const experiences = (await getCollection('experience')).sort(
+  (a, b) => b.data.start.valueOf() - a.data.start.valueOf(),
+);
+---
+
+<BaseLayout image={new URL('/og.png', Astro.site).href}>
+  <Header />
+  <main>
+    <Hero />
+
+    <section class="shell section" id="research" aria-labelledby="research-title">
+      <div class="section-heading section-heading-row">
+        <div>
+          <p class="eyebrow">Research</p>
+          <h2 id="research-title">Publications</h2>
+        </div>
+        <p>{publicationSummary}</p>
+      </div>
+      <div class="publication-list">
+        {publications.map((publication) => <PublicationRow publication={publication} />)}
+      </div>
+    </section>
+
+    <section class="shell section" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <p class="eyebrow">Systems &amp; prototypes</p>
+        <h2 id="projects-title">Projects</h2>
+      </div>
+      <div class="project-grid">
+        {projects.map((project) => <ProjectCard project={project} />)}
+      </div>
+    </section>
+
+    <About education={education} experiences={experiences} />
+  </main>
+  <Footer />
+</BaseLayout>

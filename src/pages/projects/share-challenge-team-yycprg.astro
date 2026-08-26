@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const target = '/projects/unmanned-store/';
+---
+
+<BaseLayout>
+  <main class="redirect-page shell">
+    <p>Redirecting to <a href={target}>Large Unmanned Store System</a>.</p>
+  </main>
+  <script is:inline define:vars={{ target }}>window.location.replace(target);</script>
+</BaseLayout>

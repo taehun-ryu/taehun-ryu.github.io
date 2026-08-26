@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const target = '/projects/visual-slam/';
+---
+
+<BaseLayout>
+  <main class="redirect-page shell">
+    <p>Redirecting to <a href={target}>Visual SLAM Enhancement</a>.</p>
+  </main>
+  <script is:inline define:vars={{ target }}>window.location.replace(target);</script>
+</BaseLayout>

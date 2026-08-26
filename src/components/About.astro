@@ -1,0 +1,91 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  education: CollectionEntry<'education'>[];
+  experiences: CollectionEntry<'experience'>[];
+}
+
+const { education, experiences } = Astro.props;
+const enDash = String.fromCodePoint(0x2013);
+const formatYearMonth = (date: Date) =>
+  `${date.getUTCFullYear()}.${String(date.getUTCMonth() + 1).padStart(2, '0')}`;
+const formatPeriod = (start: Date, end?: Date) =>
+  `${formatYearMonth(start)} ${enDash} ${end ? formatYearMonth(end) : 'Present'}`;
+---
+
+<section class="about shell section" id="about" aria-labelledby="about-title">
+  <div class="section-heading">
+    <p class="eyebrow">Background</p>
+    <h2 id="about-title">About</h2>
+  </div>
+
+  <div class="about-copy">
+  <p>
+    I received my B.S. in Robotics, with a minor in Artificial Intelligence,
+    from <a href="https://www.hanyang.ac.kr/web/eng/identity">Hanyang University ERICA</a>.
+    During my undergraduate studies, I worked on robot localization and perception,
+    which led me to explore visual SLAM and sensor calibration.
+  </p>
+
+  <p>
+    Building on this background, I am pursuing a Ph.D. in Artificial Intelligence
+    at <a href="https://aigs.unist.ac.kr/eng/index.php">UNIST</a>, advised by
+    Prof. <a href="https://unist.info/?page_id=2358">Kyungdon Joo</a> in the
+    3D Vision &amp; Robotics Lab.
+    My current research focuses on event-based vision and sensor calibration,
+    with a broader interest in geometric perception for robotics.
+  </p>
+  </div>
+
+  <section class="background-subsection" aria-labelledby="education-title">
+    <h3 id="education-title">Education</h3>
+    <div class="background-list">
+      {education.map((entry) => (
+        <article class="background-row">
+          <p class="background-period">{formatPeriod(entry.data.start, entry.data.end)}</p>
+          <div>
+            <h4>{entry.data.degree}</h4>
+            <p>{entry.data.institution}</p>
+            {entry.data.detail && <p>{entry.data.detail}</p>}
+            {entry.data.advisor && <p>Advisor: {entry.data.advisor}</p>}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  {experiences.length > 0 && (
+    <section class="background-subsection" aria-labelledby="experience-title">
+      <h3 id="experience-title">Experience</h3>
+      <div class="background-list">
+        {experiences.map((entry) => (
+          <article class="background-row">
+            <p class="background-period">{formatPeriod(entry.data.start, entry.data.end)}</p>
+              <div>
+                <h4>{entry.data.role}</h4>
+                <p>{entry.data.organization}</p>
+                {entry.data.lab && (
+                  <p>
+                    {entry.data.lab_link
+                      ? <a href={entry.data.lab_link.url}>{entry.data.lab}</a>
+                      : entry.data.lab}
+                  </p>
+                )}
+                {entry.data.advisor && (
+                  <p>
+                    Advisor: {entry.data.advisor_link
+                      ? <a href={entry.data.advisor_link.url}>{entry.data.advisor}</a>
+                      : entry.data.advisor}
+                  </p>
+                )}
+                {entry.data.project && (
+                  <p>Project: <a href={entry.data.project.url}>{entry.data.project.label}</a></p>
+                )}
+              </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  )}
+</section>

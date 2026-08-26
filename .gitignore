@@ -1,0 +1,13 @@
+# Local editor and operating-system files
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local preview and tool output
+*.log
+.env
+.env.*
+node_modules/
+.astro/
+dist/
