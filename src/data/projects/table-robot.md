@@ -6,6 +6,9 @@ affiliation: "Undergraduate project at Hanyang University ERICA"
 image: "/images/projects/table-robot.png"
 imageAlt: "Multiple table robots operating in an indoor restaurant environment"
 code: "https://github.com/BEYOND-thelimit/TableRobotSystem-hive.git"
+paper:
+  label: "Project paper · ICROS 2024"
+  url: "/uploads/icros2024.pdf"
 featured: true
 ---
 
@@ -21,4 +24,4 @@ This project developed a centralized perception and coordination framework for m
 
 ## Outcome
 
-The integrated system was validated in an end-to-end indoor demonstration and established a practical localization stack spanning onboard estimation and infrastructure-based visual perception.
+The integrated system was validated in an end-to-end indoor demonstration and established a practical localization stack spanning onboard estimation and infrastructure-based visual perception. A project paper was presented at the *ICROS 2024* Undergraduate Student Paper Competition, where it received an **Undergraduate Student Paper Award**.

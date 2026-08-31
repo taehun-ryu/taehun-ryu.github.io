@@ -33,6 +33,7 @@ const projects = defineCollection({
     image: z.string(),
     imageAlt: z.string(),
     code: z.url(),
+    paper: link.optional(),
     featured: z.boolean().default(true),
   }),
 });

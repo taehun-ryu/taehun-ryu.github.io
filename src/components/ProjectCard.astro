@@ -7,6 +7,7 @@ interface Props {
 
 const { project } = Astro.props;
 const href = `/projects/${project.id}/`;
+const year = project.data.date.getFullYear();
 ---
 
 <a class="project-card" href={href} target="_blank" rel="noopener noreferrer" aria-label={`${project.data.title}, opens in a new tab`}>
@@ -14,8 +15,7 @@ const href = `/projects/${project.id}/`;
     <img src={project.data.image} alt={project.data.imageAlt} loading="lazy" />
   </div>
   <div class="project-copy">
-    <p class="project-meta">{project.data.affiliation}</p>
+    <p class="project-meta">{project.data.affiliation} <span aria-hidden="true">·</span> {year}</p>
     <h3>{project.data.title} <span aria-hidden="true">↗</span></h3>
-    <p>{project.data.summary}</p>
   </div>
 </a>

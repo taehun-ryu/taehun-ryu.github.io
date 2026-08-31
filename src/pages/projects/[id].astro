@@ -29,6 +29,7 @@ const image = new URL(project.data.image, Astro.site).href;
       <p class="project-lede">{project.data.summary}</p>
       <div class="project-detail-links">
         <a href={project.data.code}>View code ↗</a>
+        {project.data.paper && <a href={project.data.paper.url}>{project.data.paper.label} ↗</a>}
       </div>
     </header>
     <figure class="project-hero-image">
