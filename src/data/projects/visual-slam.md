@@ -1,5 +1,6 @@
 ---
 title: "Visual SLAM Enhancement"
+subtitle: "SSC-Based Adaptive Feature Selection for ORB-SLAM3"
 date: "2024-11-28"
 summary: "Integrated SSC-based adaptive non-maximal suppression into ORB-SLAM3 for more spatially balanced feature selection and stable tracking."
 affiliation: "Research project at UNIST"

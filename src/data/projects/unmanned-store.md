@@ -1,5 +1,6 @@
 ---
 title: "Large Unmanned Store System"
+subtitle: "Low-Cost Autonomous Cart System with Centralized Multi-Camera Perception"
 date: "2023-01-31"
 summary: "Built a low-cost autonomous cart system with centralized multi-camera perception, global calibration, and cart-level autonomy."
 affiliation: "Undergraduate project at Hanyang University ERICA"

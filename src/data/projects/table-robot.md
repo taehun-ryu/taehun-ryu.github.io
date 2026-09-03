@@ -1,7 +1,8 @@
 ---
-title: "Table Robot System for Restaurant Automation"
+title: "Table Robot System"
+subtitle: "Multi-Robot Dining Automation with Ceiling-Camera Perception and Dynamic Path Planning"
 date: "2024-05-29"
-summary: "Combined onboard EKF estimates with ceiling-camera observations for robust multi-robot localization and coordination."
+summary: "Developed a multi-robot dining system that autonomously forms tables and serves guests using ceiling-camera perception and dynamic path planning."
 affiliation: "Undergraduate project at Hanyang University ERICA"
 image: "/images/projects/table-robot.png"
 imageAlt: "Multiple table robots operating in an indoor restaurant environment"
