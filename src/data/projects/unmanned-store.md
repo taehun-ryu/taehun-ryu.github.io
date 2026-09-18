@@ -1,8 +1,8 @@
 ---
 title: "Large Unmanned Store System"
-subtitle: "Low-Cost Autonomous Cart System with Centralized Multi-Camera Perception"
+subtitle: "Ceiling-Mounted Multi-Camera Perception for Autonomous Shopping Carts"
 date: "2023-01-31"
-summary: "Built a low-cost autonomous cart system with centralized multi-camera perception, global calibration, and cart-level autonomy."
+summary: "Built centralized perception using ceiling-mounted cameras, calibrating multiple views into a shared global frame and estimating person positions to enable autonomous shopping carts to follow customers with low-cost onboard hardware."
 affiliation: "Undergraduate project at Hanyang University ERICA"
 image: "/images/projects/unmanned-store.png"
 imageAlt: "Autonomous shopping cart and ceiling-camera perception system"
