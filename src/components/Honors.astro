@@ -1,8 +1,8 @@
 ---
 const awards = [
-  { year: '2024', title: 'Grand Prize', event: 'University Creative Capstone Design Competition', scope: 'Hanyang University ERICA', project: 'Table Robot System', href: '/projects/table-robot/' },
   { year: '2024', title: 'Encouragement Award', event: 'Intelligent Robotics Consortium Creative Capstone Design Competition', scope: 'National competition', project: 'Table Robot System', href: '/projects/table-robot/' },
-  { year: '2024', title: 'Gold Award', event: 'College of Engineering Capstone Design Fair', scope: 'Hanyang University ERICA', project: 'Table Robot System', href: '/projects/table-robot/' },
+  { year: '2024', title: 'Grand Prize', event: 'Creative Capstone Design Competition', scope: 'Hanyang University ERICA, College of Engineering', progression: { level: 'college', next: 'national competition' }, project: 'Table Robot System', href: '/projects/table-robot/' },
+  { year: '2024', title: 'Gold Award', event: 'Capstone Design Fair', scope: 'Hanyang University ERICA, Department of Robotics', progression: { level: 'department', next: 'college competition' }, project: 'Table Robot System', href: '/projects/table-robot/' },
   { year: '2024', title: 'Undergraduate Student Paper Award', event: 'Undergraduate Student Paper Competition', scope: 'Institute of Control, Robotics, and Systems', project: '', href: '', paper: '/uploads/icros2024.pdf' },
   { year: '2023', title: 'Encouragement Award', event: 'Digital Innovation Sharing University Robot Building Competition', scope: '', project: 'Large Unmanned Store System', href: '/projects/unmanned-store/' },
 ];
@@ -26,7 +26,8 @@ const scholarships = [
           <p class="background-period">{award.year}</p>
           <div>
             <h4>{award.title}</h4>
-            <p>{award.event}{award.scope && ` · ${award.scope}`}</p>
+            <p>{award.event}{award.scope && <> · {award.scope === 'National competition' ? <strong>{award.scope}</strong> : award.scope}</>}</p>
+            {award.progression && <p><strong>1st place</strong> at the {award.progression.level} level; qualified for the <strong>{award.progression.next}</strong>.</p>}
             {award.project && <a class="honors-project" href={award.href}>{award.project}</a>}
             {award.paper && <>{award.project && <span aria-hidden="true"> · </span>}<a class="honors-project" href={award.paper}>Paper</a></>}
           </div>
@@ -43,7 +44,7 @@ const scholarships = [
           <div>
             <h4>{scholarship.title}</h4>
             <p>{scholarship.institution}</p>
-            {scholarship.detail && <p>{scholarship.detail}</p>}
+            {scholarship.detail && <p>Selected as the <strong>sole recipient</strong> in the major across <strong>all four undergraduate years</strong>.</p>}
             {scholarship.grants && <ul class="honors-grants">{scholarship.grants.map((grant) => <li>{grant}</li>)}</ul>}
           </div>
         </div>

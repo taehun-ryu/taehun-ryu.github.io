@@ -37,6 +37,6 @@ A patent application for the project was filed in South Korea.
 
 The project also received the following awards:
 
-- **Grand Prize**, 2024 University Creative Capstone Design Competition (교내 창의적 종합설계 경진대회).
+- **Grand Prize**, 2024 Creative Capstone Design Competition, a college-wide competition at the College of Engineering, Hanyang University ERICA (교내 창의적 종합설계 경진대회).
 - **Encouragement Award**, 2024 Intelligent Robotics Consortium Creative Capstone Design Competition, a national-level competition (지능형 로봇 컨소시엄 창의적 종합설계 경진대회).
-- **Gold Award**, 2024 College of Engineering Capstone Design Fair (공학대학 CAPSTONE DESIGN FAIR).
+- **Gold Award**, 2024 College of Engineering Capstone Design Fair, a department-level competition within the Department of Robotics, Hanyang University ERICA (공학대학 CAPSTONE DESIGN FAIR).
