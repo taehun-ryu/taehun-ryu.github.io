@@ -77,6 +77,11 @@ h1 { margin-bottom: 22px; font-size: clamp(3.25rem, 7.5vw, 5.7rem); line-height:
 .project-card:hover h3 { color: var(--accent); }
 .project-card:hover h3 span { transform: translate(2px, -2px); }
 .about { padding-bottom: var(--space-major); }
+.honors { padding-bottom: var(--space-major); }
+.honors-group + .honors-group { margin-top: var(--space-background); }
+.honors-group h3 { margin: 0 0 16px; font-size: 1.15rem; letter-spacing: -0.02em; }
+.honors-project { color: var(--accent); font-size: 0.82rem; font-weight: 650; }
+.honors-grants { margin: 8px 0 0; padding-left: 20px; color: var(--muted); font-size: 0.88rem; }
 .about-copy { max-width: 760px; font-size: 1.08rem; }
 .about-copy p:last-child { margin-bottom: 0; }
 .background-subsection { margin-top: var(--space-background); }

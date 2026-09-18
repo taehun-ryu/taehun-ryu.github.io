@@ -1,0 +1,53 @@
+---
+const awards = [
+  { year: '2024', title: 'Grand Prize', event: 'University Creative Capstone Design Competition', scope: 'Hanyang University ERICA', project: 'Table Robot System', href: '/projects/table-robot/' },
+  { year: '2024', title: 'Encouragement Award', event: 'Intelligent Robotics Consortium Creative Capstone Design Competition', scope: 'National competition', project: 'Table Robot System', href: '/projects/table-robot/' },
+  { year: '2024', title: 'Gold Award', event: 'College of Engineering Capstone Design Fair', scope: 'Hanyang University ERICA', project: 'Table Robot System', href: '/projects/table-robot/' },
+  { year: '2024', title: 'Undergraduate Student Paper Award', event: 'Undergraduate Student Paper Competition', scope: 'Institute of Control, Robotics, and Systems', project: '', href: '', paper: '/uploads/icros2024.pdf' },
+  { year: '2023', title: 'Encouragement Award', event: 'Digital Innovation Sharing University Robot Building Competition', scope: '', project: 'Large Unmanned Store System', href: '/projects/unmanned-store/' },
+];
+const scholarships = [
+  { period: '2024', title: 'Hanyang ERICA Academic Excellence Scholarship', institution: 'Hanyang University ERICA', detail: 'Selected as the sole recipient in the major across all four undergraduate years.' },
+  { period: '2023', title: 'National Excellence Scholarship (Science and Engineering)', institution: 'Korea Student Aid Foundation', detail: '' },
+  { period: '2022–2023', title: 'Merit-Based Scholarships', institution: 'Hanyang University ERICA', detail: '', grants: ['Fall 2023: Special Academic Merit Scholarship (성적우수 특별장학)', 'Fall 2022: SHARE Academic Merit Scholarship I (SHARE 성적우수장학Ⅰ)', 'Fall 2022: Special Academic Merit Scholarship (성적우수 특별장학)'] },
+];
+---
+
+<section class="shell section honors" id="honors" aria-labelledby="honors-title">
+  <div class="section-heading">
+    <p class="eyebrow">Recognition</p>
+    <h2 id="honors-title">Awards &amp; Scholarships</h2>
+  </div>
+  <div class="honors-group">
+    <h3>Awards</h3>
+    <div class="background-list">
+      {awards.map((award) => (
+        <div class="background-row">
+          <p class="background-period">{award.year}</p>
+          <div>
+            <h4>{award.title}</h4>
+            <p>{award.event}{award.scope && ` · ${award.scope}`}</p>
+            {award.project && <a class="honors-project" href={award.href}>{award.project}</a>}
+            {award.paper && <>{award.project && <span aria-hidden="true"> · </span>}<a class="honors-project" href={award.paper}>Paper</a></>}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+  <div class="honors-group">
+    <h3>Scholarships</h3>
+    <div class="background-list">
+      {scholarships.map((scholarship) => (
+        <div class="background-row">
+          <p class="background-period">{scholarship.period}</p>
+          <div>
+            <h4>{scholarship.title}</h4>
+            <p>{scholarship.institution}</p>
+            {scholarship.detail && <p>{scholarship.detail}</p>}
+            {scholarship.grants && <ul class="honors-grants">{scholarship.grants.map((grant) => <li>{grant}</li>)}</ul>}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
