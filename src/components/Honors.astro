@@ -9,46 +9,51 @@ const awards = [
 const scholarships = [
   { period: 'Spring 2024', title: 'Hanyang University ERICA Academic Excellence Scholarship', institution: 'Hanyang University ERICA', detail: 'Selected as the sole recipient among all first- through fourth-year students in the Department of Robotics.' },
   { period: 'Fall 2023', title: 'National Excellence Scholarship (Science and Engineering)', institution: 'Korea Student Aid Foundation', detail: '' },
-  { period: '2022–2023', title: 'Merit-Based Scholarships', institution: 'Hanyang University ERICA', detail: '', grants: ['Fall 2023: Special Academic Merit Scholarship (성적우수 특별장학)', 'Fall 2022: SHARE Academic Merit Scholarship I (SHARE 성적우수장학Ⅰ)', 'Fall 2022: Special Academic Merit Scholarship (성적우수 특별장학)'] },
+  { period: '2022–2023', title: 'Merit-Based Scholarships', institution: 'Hanyang University ERICA', detail: '', grants: [
+    { period: 'Fall 2023', title: 'Special Academic Merit Scholarship (성적우수 특별장학)' },
+    { period: 'Fall 2022', title: 'SHARE Academic Merit Scholarship I (SHARE 성적우수장학Ⅰ)' },
+    { period: 'Fall 2022', title: 'Special Academic Merit Scholarship (성적우수 특별장학)' },
+  ] },
 ];
 ---
 
-<section class="shell section honors" id="honors" aria-labelledby="honors-title">
-  <div class="section-heading">
-    <p class="eyebrow">Recognition</p>
-    <h2 id="honors-title">Awards &amp; Scholarships</h2>
-  </div>
-  <div class="honors-group">
-    <h3>Awards</h3>
-    <div class="background-list">
-      {awards.map((award) => (
-        <div class="background-row">
-          <p class="background-period">{award.year}</p>
-          <div>
-            <h4>{award.title}</h4>
-            <p>{award.event}{award.scope && <> · {award.scope === 'National competition' ? <strong>{award.scope}</strong> : award.scope}</>}</p>
-            {award.progression && <p><strong>1st place</strong> at the {award.progression.level} level; qualified for the <strong>{award.progression.next}</strong>.</p>}
-            {award.project && <a class="honors-project" href={award.href}>{award.project}</a>}
-            {award.paper && <>{award.project && <span aria-hidden="true"> · </span>}<a class="honors-project" href={award.paper}>Paper</a></>}
-          </div>
+<section class="background-subsection honors-subsection" id="honors" aria-labelledby="awards-title">
+  <h3 id="awards-title">Awards</h3>
+  <div class="honors-list">
+    {awards.map((award) => (
+      <div class="honors-row">
+        <p class="honors-period">{award.year}</p>
+        <div>
+          <h4>{award.title}</h4>
+          <p>{award.event}{award.scope && <> · {award.scope === 'National competition' ? <strong>{award.scope}</strong> : award.scope}</>}</p>
+          {award.progression && <p><strong>1st place</strong> at the {award.progression.level} level; advanced to the {award.progression.next}.</p>}
+          {award.project && <a class="honors-project" href={award.href}>{award.project}</a>}
+          {award.paper && <>{award.project && <span aria-hidden="true"> · </span>}<a class="honors-project" href={award.paper}>Paper</a></>}
         </div>
-      ))}
-    </div>
+      </div>
+    ))}
   </div>
-  <div class="honors-group">
-    <h3>Scholarships</h3>
-    <div class="background-list">
-      {scholarships.map((scholarship) => (
-        <div class="background-row">
-          <p class="background-period">{scholarship.period}</p>
-          <div>
-            <h4>{scholarship.title}</h4>
-            <p>{scholarship.institution}</p>
-            {scholarship.detail && <p>Selected as the <strong>sole recipient</strong> among <strong>all first- through fourth-year students</strong> in the Department of Robotics.</p>}
-            {scholarship.grants && <ul class="honors-grants">{scholarship.grants.map((grant) => <li>{grant}</li>)}</ul>}
-          </div>
+</section>
+
+<section class="background-subsection honors-subsection" aria-labelledby="scholarships-title">
+  <h3 id="scholarships-title">Scholarships</h3>
+  <div class="honors-list">
+    {scholarships.map((scholarship) => (
+      <div class="honors-row">
+        <p class="honors-period">{scholarship.period}</p>
+        <div>
+          <h4>{scholarship.title}</h4>
+          <p>{scholarship.institution}</p>
+          {scholarship.detail && <p>{scholarship.detail}</p>}
+          {scholarship.grants && (
+            <ul class="honors-grants">
+              {scholarship.grants.map((grant) => (
+                <li><span>{grant.period}</span><span>{grant.title}</span></li>
+              ))}
+            </ul>
+          )}
         </div>
-      ))}
-    </div>
+      </div>
+    ))}
   </div>
 </section>

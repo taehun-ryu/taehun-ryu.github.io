@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import Honors from './Honors.astro';
 
 interface Props {
   education: CollectionEntry<'education'>[];
@@ -67,19 +68,19 @@ const formatPeriod = (start: Date, end?: Date) =>
                 {entry.data.lab && (
                   <p>
                     {entry.data.lab_link
-                      ? <a href={entry.data.lab_link.url}>{entry.data.lab}</a>
+                      ? <a class="experience-link" href={entry.data.lab_link.url}>{entry.data.lab}</a>
                       : entry.data.lab}
                   </p>
                 )}
                 {entry.data.advisor && (
                   <p>
                     Advisor: {entry.data.advisor_link
-                      ? <a href={entry.data.advisor_link.url}>{entry.data.advisor}</a>
+                      ? <a class="experience-link" href={entry.data.advisor_link.url}>{entry.data.advisor}</a>
                       : entry.data.advisor}
                   </p>
                 )}
                 {entry.data.project && (
-                  <p>Project: <a href={entry.data.project.url}>{entry.data.project.label}</a></p>
+                  <p>Project: <a class="experience-link" href={entry.data.project.url}>{entry.data.project.label}</a></p>
                 )}
               </div>
           </article>
@@ -87,4 +88,6 @@ const formatPeriod = (start: Date, end?: Date) =>
       </div>
     </section>
   )}
+
+  <Honors />
 </section>
