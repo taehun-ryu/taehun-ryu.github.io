@@ -7,6 +7,7 @@ interface Props {
 
 const { publication } = Astro.props;
 const { data } = publication;
+const [badgeLabel, badgeDetail] = data.badge?.split(' · ', 2) ?? [];
 ---
 
 <article class="publication-row">
@@ -16,7 +17,6 @@ const { data } = publication;
   <div class="publication-copy">
     <div class="publication-heading">
       <h3>{data.title}</h3>
-      {data.badge && <span class="badge">{data.badge}</span>}
     </div>
     <p class="authors">
       {data.authors.map((author, index) => (
@@ -24,6 +24,12 @@ const { data } = publication;
       ))}
     </p>
     <p class="venue"><span>{data.venueShort}</span> · {data.venue}</p>
+    {data.badge && (
+      <p class="publication-accolade">
+        <strong>{badgeLabel}</strong>
+        {badgeDetail && <span>{badgeDetail}</span>}
+      </p>
+    )}
     <div class="publication-links">
       {data.links.map((link) => <a href={link.url}>{link.label}</a>)}
     </div>
