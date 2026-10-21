@@ -8,7 +8,7 @@ venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition"
 venueShort: "CVPR 2026"
 publicationType: "conference"
 date: "2026-02-24"
-badge: "Highlight · Top 3.6% of 16,092 submissions"
+badge: "CVPR Highlight · Top 3.6% of 16,092 submissions"
 thumbnail: "/images/publications/corner2tag.png"
 thumbnailAlt: "Event camera calibraiton with checkerboard and fiducial tag detection"
 links:
